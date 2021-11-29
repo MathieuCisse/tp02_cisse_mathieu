@@ -1,1 +1,1 @@
-web: node FRONTEND/tp2/server.js 
+web: cd FRONTEND/tp2/ 
