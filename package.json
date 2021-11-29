@@ -1,5 +1,0 @@
-{
-    "scripts": {
-        "start": "cd FRONTEND/tp2/ && npm start"
-    }
-}
