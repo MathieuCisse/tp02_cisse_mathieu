@@ -1,18 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { parsePhoneNumber } from 'libphonenumber-js/min';
 
 @Pipe({
   name: 'telephoneFormat'
 })
 export class TelephoneFormatPipe implements PipeTransform {
 
+  /**
+   * Formattage des numéros de téléphone dans les normes nationales de france
+   * @param phoneValue
+   */
   transform(phoneValue: string): string {
-    try {
-      const phoneNumber = parsePhoneNumber(phoneValue + '', "FR");
-      return phoneNumber.formatNational();
-    } catch (error) {
-      return phoneValue;
-    }
+    return '+33'+phoneValue.substr(1);
   }
 
 }

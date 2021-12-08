@@ -11,6 +11,9 @@ export class InputInvalidDirective {
     this.element = element;
   }
 
+  /**
+   * Modification du background de l'input s'il est valide ou pas
+   */
   @HostListener('change') validityInput() {
     this.element.nativeElement.style.backgroundColor = this.element.nativeElement.checkValidity() ? "" : "red";
   }
