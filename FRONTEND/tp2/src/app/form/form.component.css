@@ -1,0 +1,12 @@
+label {
+  width: 30%;
+}
+
+label:not(label:first-child):before {
+  content: "\a";
+  white-space: pre;
+}
+
+input {
+  width: 30%;
+}

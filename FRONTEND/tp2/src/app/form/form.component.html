@@ -1,1 +1,54 @@
-<p>form works!</p>
+<h1>Formulaire</h1>
+<form #registerForm="ngForm" (ngSubmit)="sendToRecap(registerForm)" novalidate>
+
+  <label>Nom:</label>
+  <input type="text" name="nom" [(ngModel)]="nom" appInputInvalid required />
+
+  <label>Prénom:</label>
+  <input type="text" name="prenom" [(ngModel)]="prenom" appInputInvalid required/>
+
+  <label>Adresse:</label>
+  <input type="text" name="adresse" [(ngModel)]="adresse" appInputInvalid required />
+
+  <label>Code postal:</label>
+  <input type="text" name="cp" [(ngModel)]="cp" appInputInvalid required />
+
+  <label>Ville:</label>
+  <input type="text" name="ville" [(ngModel)]="ville" appInputInvalid required />
+
+  <label>Pays:</label>
+  <input type="text" name="ville" [(ngModel)]="pays" appInputInvalid required />
+
+  <label>Téléphone:</label>
+  <input type="tel" name="telephone" pattern="[0-9]{10}" [(ngModel)]="telephone" appInputInvalid required />
+
+  <label>Email:</label>
+  <input type="email" name="email" [(ngModel)]="email" appInputInvalid required />
+
+  <label>Civilité:</label>
+  <input type="text" name="civilite" [(ngModel)]="civilite" appInputInvalid required />
+
+  <label>Identifiant:</label>
+  <input type="text" name="identifiant" [(ngModel)]="identifiant" appInputInvalid required />
+
+  <label>Mot de passe:</label>
+  <input type="password" name="motdepasse" [(ngModel)]="motdepasse" appInputInvalid required />
+
+  <br />
+  <button type="submit">Valider</button>
+</form>
+
+<hr />
+<app-recap *ngIf="formIsValid"
+           [nom]="nom"
+           [prenom]="prenom"
+           [adresse]="adresse"
+           [cp]="cp"
+           [ville]="ville"
+           [pays]="pays"
+           [telephone]="telephone"
+           [email]="email"
+           [civilite]="civilite"
+           [identifiant]="identifiant"
+           [motdepasse]="motdepasse">
+</app-recap>

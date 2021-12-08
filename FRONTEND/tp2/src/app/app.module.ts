@@ -6,6 +6,9 @@ import { TetiereComponent } from './tetiere/tetiere.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { RecapComponent } from './recap/recap.component';
+import { FormsModule } from '@angular/forms';
+import { InputInvalidDirective } from './input-invalid.directive';
+import { TelephoneFormatPipe } from './telephone-format.pipe';
 
 @NgModule({
   declarations: [
@@ -13,10 +16,13 @@ import { RecapComponent } from './recap/recap.component';
     TetiereComponent,
     FooterComponent,
     FormComponent,
-    RecapComponent
+    RecapComponent,
+    InputInvalidDirective,
+    TelephoneFormatPipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
